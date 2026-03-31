@@ -1,37 +1,76 @@
-# react-native-downloader
+# 🚀 react-native-downloader
 
-The simplest and most reliable way to download files in React Native with progress, permissions, and file handling built-in.
+The easiest way to download files in React Native.
+Stop rewriting file download logic in React Native!
 
-## Installation
+“The simplest and most reliable way to download files in React Native with progress, permissions, and file handling built-in.”
 
+## ✨ Features
 
-```sh
-npm install react-native-downloader
-```
-
-
-## Usage
-
-
-```js
-import { multiply } from 'react-native-downloader';
-
-// ...
-
-const result = multiply(3, 7);
-```
-
-
-## Contributing
-
-- [Development workflow](CONTRIBUTING.md#development-workflow)
-- [Sending a pull request](CONTRIBUTING.md#sending-a-pull-request)
-- [Code of conduct](CODE_OF_CONDUCT.md)
-
-## License
-
-MIT
+- 📥 **Download with progress:** Get clean `0 → 100` progress natively without UI freezing.
+- 📂 **Smart file naming:** Auto-detects extensions natively if not provided.
+- 🔐 **Auto permission handling:** Graceful fallback to cache directories or handles permissions automatically on Android.
+- ⚡ **Lightweight & fast:** 100% pure native code (Kotlin and Swift) **without any third-party dependencies**.
+- 🛠 **Structured Error Handling:** Clean JS promises with `{ success: false, error: 'NETWORK_ERROR' }` instead of silent failures.
 
 ---
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+## 💻 Installation
+
+```sh
+npm install @chavanrk/react-native-downloader
+# or
+yarn add @chavanrk/react-native-downloader
+```
+
+_Note: Since this library uses pure native TurboModules/NativeModules, please make sure to run `pod install` in your `ios/` directory!_
+
+---
+
+## ✨ Example Usage
+
+```javascript
+import { download } from '@chavanrk/react-native-downloader';
+
+const runDownload = async () => {
+  const result = await download({
+    url: 'https://example.com/file.pdf',
+    // fileName: 'custom_name.pdf', // Optional! Auto-detects if missing.
+    onProgress: (p) => {
+      console.log(`Downloading: ${p}%`);
+    },
+  });
+
+  if (result.success) {
+    console.log('Downloaded successfully to:', result.filePath);
+  } else {
+    console.error('Download failed:', result.error);
+  }
+};
+```
+
+---
+
+## ⚡ Growth Strategy (Real Talk)
+
+To make this package successful, ensure you:
+
+1. **Add a Demo GIF:** Include a high-quality GIF of a progress bar here.
+2. **Post on:**
+   - Reddit (`r/reactnative` & `r/reactjs`)
+   - Twitter & LinkedIn
+3. **GitHub Title:** “Stop rewriting file download logic in React Native”
+4. **Simply be better:** “Do one thing better than everyone else.” This package focuses explicitly on taking the headache out of downloading headers, arrays, and progress loops.
+
+---
+
+## 🔥 Future v2 Ideas
+
+- Background downloads (app closed/suspended)
+- Pause / resume controls
+- Parallel concurrent downloads
+- Expanded local Cache management API
+
+---
+
+_Made natively for the community 🤝_

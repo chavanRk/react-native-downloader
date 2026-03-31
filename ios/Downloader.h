@@ -1,5 +1,6 @@
 #import <DownloaderSpec/DownloaderSpec.h>
+#import <React/RCTEventEmitter.h>
 
-@interface Downloader : NSObject <NativeDownloaderSpec>
+@interface Downloader : RCTEventEmitter <NativeDownloaderSpec>
 
 @end

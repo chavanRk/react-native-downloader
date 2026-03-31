@@ -1,5 +1,5 @@
 {
-  "name": "react-native-downloader",
+  "name": "@chavanrk/react-native-downloader",
   "version": "0.1.0",
   "description": "The simplest and most reliable way to download files in React Native with progress, permissions, and file handling built-in.",
   "main": "./lib/module/index.js",
@@ -43,18 +43,25 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "download",
+    "downloader",
+    "file-download",
+    "progress",
+    "turbo-module",
+    "native-module",
+    "file-manager"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/developer/react-native-downloader.git"
+    "url": "git+https://github.com/chavanRk/react-native-downloader.git"
   },
-  "author": "Developer <dev@example.com> (https://example.com)",
+  "author": "Rohit Chavan <chavanrohit413@gmail.com> (https://github.com/chavanRk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/developer/react-native-downloader/issues"
+    "url": "https://github.com/chavanRk/react-native-downloader/issues"
   },
-  "homepage": "https://github.com/developer/react-native-downloader#readme",
+  "homepage": "https://github.com/chavanRk/react-native-downloader#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
